@@ -1,0 +1,15 @@
+# Ollama Configuration
+OLLAMA_API_BASE_URL=http://localhost:11434
+OLLAMA_EMBEDDING_MODEL=nomic-embed-text
+OLLAMA_LLM_MODEL=llama2
+
+# LanceDB Configuration
+LANCEDB_PATH=./db/lancedb
+
+# RAG Configuration
+CHUNK_SIZE=512
+CHUNK_OVERLAP=50
+TOP_K_RESULTS=5
+
+# Application
+NODE_ENV=development

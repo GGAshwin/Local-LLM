@@ -1,0 +1,32 @@
+{
+  "name": "local-rag-system",
+  "version": "1.0.0",
+  "description": "Production-ready Node.js RAG application using Ollama and LanceDB",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --max-old-space-size=2048 src/index.js",
+    "ingest": "node --max-old-space-size=2048 src/ingest.js",
+    "query": "node --max-old-space-size=2048 src/query.js",
+    "dev": "nodemon --exec node src/index.js",
+    "test": "node --max-old-space-size=2048 src/test.js"
+  },
+  "keywords": [
+    "rag",
+    "ollama",
+    "lancedb",
+    "vector-database",
+    "llm",
+    "semantic-search"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "@lancedb/lancedb": "^0.4.0",
+    "axios": "^1.6.2",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
