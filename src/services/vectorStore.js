@@ -120,12 +120,17 @@ export async function search(query, k = config.rag.topK) {
       .limit(k)
       .toArray();
 
-    return results.map((result) => ({
+    const formattedResults = results.map((result) => ({
       id: result.id,
       content: result.content,
       sourceDoc: result.sourceDoc,
       score: result._distance !== undefined ? 1 - result._distance : null,
     }));
+
+    console.log("Formatted search results:");
+    console.log(formattedResults);
+
+    return formattedResults;
   } catch (error) {
     console.error('Error searching documents:', error.message);
     throw error;
